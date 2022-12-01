@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentHome">
+
+    <fragment
+        android:id="@+id/fragmentHome"
+        android:name="com.example.fragmentsssss.fragments.fragment_Home"
+        android:label="FragmentHome"
+        tools:layout="@layout/fragment__home" />
+    <fragment
+        android:id="@+id/fragmentDashboard"
+        android:name="com.example.fragmentsssss.fragments.fragment_Dashboard"
+        android:label="FragmentDashboard"
+        tools:layout="@layout/fragment__dashboard" >
+        <action
+            android:id="@+id/action_fragment_Dashboard_to_fragment_Notification"
+            app:destination="@id/fragmentNotification" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentChildhoodPic"
+        android:name="com.example.fragmentsssss.fragments.fragment_Childhoodpic"
+        android:label="FragmentChildhoodPic"
+        tools:layout="@layout/fragment__childhoodpic" />
+    <fragment
+        android:id="@+id/fragmentNotification"
+        android:name="com.example.fragmentsssss.fragments.fragment_Notification"
+        android:label="FragmentNotification"
+        tools:layout="@layout/fragment__notification" >
+
+        <argument
+            android:name="name"
+            android:defaultValue="rame"
+            app:argType="string"/>
+    </fragment>
+</navigation>
